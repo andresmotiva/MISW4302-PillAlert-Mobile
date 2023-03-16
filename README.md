@@ -31,8 +31,8 @@ La aplicación cuenta con las siguientes funcionalidades:
 ### APK
 Para instalar la aplicación en tu dispositivo móvil, sigue los siguientes pasos:
 
-- Descarga el archivo APK desde el repositorio de GitHub.
-- Conecta tu dispositivo móvil a tu computadora y transfiere el archivo APK a tu dispositivo.
+- Descarga el [archivo APK](https://github.com/andresmotiva/MISW4302-PillAlert-Mobile/raw/main/android/app/build/outputs/apk/release/app-release.apk) desde el repositorio de GitHub.
+- Conecta tu dispositivo móvil a tu computadora y transfiere el [archivo APK](https://github.com/andresmotiva/MISW4302-PillAlert-Mobile/raw/main/android/app/build/outputs/apk/release/app-release.apk) a tu dispositivo.
 - En tu dispositivo móvil, habilita la opción "Fuentes desconocidas" en la configuración de seguridad.
 - Abre el archivo APK en tu dispositivo móvil y sigue las instrucciones para instalar la aplicación.
 
