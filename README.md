@@ -24,6 +24,11 @@ La aplicación cuenta con las siguientes funcionalidades:
 
 ## Cómo instalar la aplicación
 
+### Expo Build:
+- Descargue la app Expo Go: https://expo.dev/client
+- Ingrese a esta URL y abra la aplicación con la app Expo Go: https://expo.dev/@a.ramirezr2/pillalert?serviceType=classic&distribution=expo-go
+
+### APK
 Para instalar la aplicación en tu dispositivo móvil, sigue los siguientes pasos:
 
 - Descarga el archivo APK desde el repositorio de GitHub.
