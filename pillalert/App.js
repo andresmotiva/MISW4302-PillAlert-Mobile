@@ -9,6 +9,10 @@ import {
 import LoginScreen from './screens/LoginScreen';
 import PasswordModal from './screens/PasswordModal';
 import RegisterScreen from './screens/RegisterScreen';
+import TopBar from './components/TopBar';
+import Alarm from './components/Alarm';
+import CustomButtonPrimary from './components/CustomButtonPrimary';
+import CreateAlarm from './components/CreateAlarm';
 
 export default function App() {
   const {width} = Dimensions.get('window');
@@ -17,6 +21,8 @@ export default function App() {
   const [displayLogin, setDisplayLogin] = useState(true);
   const [displayRegister, setDisplayRegister] = useState(false);
   const [displayForgotPassword, setDisplayForgotPassword] = useState(false);
+
+  const [createModal, displayCreateModal] = useState(false);
 
 
   const handleDisplayLogin = () => {
@@ -49,9 +55,12 @@ export default function App() {
 
   if (isLoggedIn) {
     return (
-      <View style={styles.container}>
-        <Text>logged In</Text>
-        <Button title="Close" onPress={() => handleDisplayLogin()} />
+      <View style={styles.containerAlarm}>
+        <TopBar onLogout={handleDisplayLogin} />
+        <Alarm name={'Despertar'} time={'5:10 a.m.'} dateArray={['Lun', 'Mar', 'Mie', 'Jue', 'Vie']} />
+        <Alarm name={'Losartan 75mg'} time={'7:00 a.m.'} count={'8 de 24'} timeDetail={'Cada 12h'} />
+        <CustomButtonPrimary onClick={() => displayCreateModal(true)} addedStyles={styles.bottomButton} placeholder={'Nueva Alarma'}  />
+        {createModal && <CreateAlarm onClose={() => displayCreateModal(false)} visible={createModal} />}
       </View>
     );
   }
@@ -85,7 +94,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  containerAlarm: {
+    flex: 1,
+    flexDirection: 'column',
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
   loginButtonGroup: {
     marginTop: 40,
   },
+  bottomButton: {
+    position: 'absolute', 
+    bottom: 40,
+  }
 });
